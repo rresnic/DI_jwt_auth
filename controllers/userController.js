@@ -110,6 +110,6 @@ module.exports = {
             message: "refreshed token",
             user: {userid, email},
             token: newAccessToken,
-        })
+        });
     },
-}
+};

@@ -6,7 +6,7 @@ const {ACCESS_TOKEN_SECRET} = process.env;
 const verifyToken = (req, res, next) => {
     const token = req.cookies['token'];
     if(!token) {
-        res.status(401).json({message: 'unauthorized user'});
+        res.status(401).json({message: 'unauthorized user, no token sent',});
         return;
     }
     if(token) {
