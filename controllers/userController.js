@@ -54,7 +54,8 @@ module.exports = {
 
             res.cookie("token", accessToken, {
                 httpOnly: true,
-                maxAge:60 * 1000, 
+                maxAge:60 * 1000,
+                secure:true, 
             });
             res.status(200).json({
                 message:"Login successful",

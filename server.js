@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
     credentials: true,
-    origin: ['http://localhost:5173', "https://di-jwt-client-1.onrender.com"]
+    origin: ['http://localhost:3002', 'http://localhost:5173', "https://di-jwt-client-1.onrender.com"]
 }))
 
 app.use("/api/user", userRouter);
