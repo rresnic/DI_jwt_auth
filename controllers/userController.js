@@ -88,7 +88,7 @@ module.exports = {
         }
     },
     logoutUser: (req, res) => {
-        res.clearCookie("token");
+        res.clearCookie("token", {httpOnly:true, secure:true, sameSite: "None"});
         req.cookies['token'] = null;
         delete req.cookies['token']
         // if using db authentication, set it to null
