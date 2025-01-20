@@ -57,6 +57,7 @@ module.exports = {
                 httpOnly: true,
                 maxAge:60 * 1000,
                 secure:true, 
+                sameSite: "None",
             });
             res.status(200).json({
                 message:"Login successful",
@@ -105,6 +106,7 @@ module.exports = {
             httpOnly: true,
             secure: true,
             maxAge: 60*1000,
+            sameSite: "None"
         });
         res.json({
             message: "refreshed token",
